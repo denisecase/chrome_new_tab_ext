@@ -6,9 +6,9 @@ context('dateTime', () => {
       const { clock, nhour, nday } = await dateTime.getClock();
       expect(clock).to.not.be.null;
       expect(clock).to.not.be.empty;
-      expect(typeof clock).to.be.string;
-      expect(typeof nhour).to.be.number;
-      expect(typeof nday).to.be.number;
+      expect(clock).to.be.a('string');
+      expect(nhour).to.be.a('number');
+      expect(nday).to.be.a('number');
     });
   });
 
@@ -51,39 +51,32 @@ context('dateTime', () => {
     });
 
     it('should return bigData', async () => {
-    const d = await dateTime.getFocus(day4.getDay(), day4.getHours());
-    expect(d).to.equal(bigData);
+      const d = await dateTime.getFocus(day4.getDay(), day4.getHours());
+      expect(d).to.equal(bigData);
+    });
+
+    it('should return def', async () => {
+      const e = await dateTime.getFocus(day5.getDay(), day5.getHours());
+      expect(e).to.equal(def);
+    });
+
+    it('should return def', async () => {
+      const f = await dateTime.getFocus(day6.getDay(), day6.getHours());
+      expect(f).to.equal(def);
+    });
+
+    it('should return weekend', async () => {
+      const z = await dateTime.getFocus(day7.getDay(), day7.getHours());
+      expect(z).to.equal(weekend);
+    });
   });
 
-  it('should return def', async () => {
-    const e = await dateTime.getFocus(day5.getDay(), day5.getHours());
-    expect(e).to.equal(def);
+  describe('Chrome new tab extension (getGreeting) ', () => {
+    it('should return a non-empty string', async () => {
+      const s = await dateTime.getGreeting();
+      expect(s).to.not.be.null;
+      expect(typeof s).to.be.string;
+      expect(s).to.not.be.empty;
+    });
   });
-
-  it('should return def', async () => {
-    const f = await dateTime.getFocus(day6.getDay(), day6.getHours());
-    expect(f).to.equal(bigData);
-  });
-
-  it('should return weekend', async () => {
-    const z = await dateTime.getFocus(day7.getDay(), day7.getHours());
-    expect(z).to.equal(weekend);
-  });
-});
-
-describe('Chrome new tab extension (getGreeting) ', () => {
-  it('should return a non-empty string', async () => {
-    const s = await dateTime.getGreeting();
-    expect(s).to.not.be.null;
-    expect(typeof s).to.be.string;
-    expect(s).to.not.be.empty;
-  });
-});
-
-describe('Chrome new tab extension (getSchoolWeek) ', () => {
-  it('should return a week number > 0', async () => {
-    const ans = await dateTime.getSchoolWeek();
-    expect(typeof ans).to.be.number;
-  });
-});
 });
