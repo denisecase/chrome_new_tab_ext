@@ -7,7 +7,7 @@ Extensions are small browser add-ons that add new and useful features to Chrome.
 ## Links
 
 - [View this extension in the Chrome Web Store](https://chrome.google.com/webstore/detail/custom-web-launcher/bjcnlknhmbnejpgmpblndpddpckjhomm?hl=en)
-- [Check out the code on BitBucket](https://bitbucket.org/sigcse2018/chrome_home_nwmsu)
+- [Check out the code](https://github.com/denisecase/chrome_new_tab_ext)
 - [Review the lessons on Canvas](https://nwmissouri.instructure.com/courses/16155)
 
 ## Prerequisites
@@ -16,7 +16,7 @@ Extensions are small browser add-ons that add new and useful features to Chrome.
 - [Install Node.js to run dev tools](https://nodejs.org/en/)
 - [Install Cypress globally](https://docs.cypress.io) - must be global to get the Cypress commands to work! Use npm which comes with Node.
 
-## 2019 Updates
+## Updates
 
 - ES6 updates
 - Cypress testing (built on Mocha test framework and Chai assertions)
@@ -45,7 +45,6 @@ Participants will create a “New Tab” extension for their school that can be 
 
 ## References & Links
 
-- [Dillinger Markdown Editor](http://dillinger.io/)
 - [Bing Image URL](http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1)
 - [Stack Overflow Question](https://stackoverflow.com/questions/10639914/is-there-a-way-to-get-bings-photo-of-the-day/45472526#45472526)
 - [Clock](https://www.ricocheting.com/code/javascript/html-generator/date-time-clock)
@@ -53,10 +52,9 @@ Participants will create a “New Tab” extension for their school that can be 
 
 ## Start Editing
 
-- Sign up for a BitBucket account.
-- Go to <https://bitbucket.org/professorcase/chrome_new_tab_ext>.
-- [Fork the repository](https://confluence.atlassian.com/bitbucket/forking-a-repository-221449527.html) into your BitBucket account in the cloud.
-- [Clone your repo](https://tortoisegit.org/docs/tortoisegit/tgit-dug-clone.html) down to your local machine.
+- Go to <https://github.com/denisecase/chrome_new_tab_ext>.
+- Fork the repository into your account in the cloud.
+- Clone your repo down to your local machine.
 - Right-click in your new "chrome_new_tab_ext" folder and select "Open With Code"
 
 ## Run Development Tasks

@@ -2,51 +2,6 @@
   "name": "chrome_new_tab_ext",
   "version": "1.0.0",
   "description": "Customized Chrome 'New Tab' Extension, which can be updated to reflect current links each semester",
-  "main": "tab.html",
-  "directories": {
-    "test": "tests"
-  },
-  "dependencies": {
-    "axios": "latest",
-    "globals": "latest"
-  },
-  "devDependencies": {
-    "@babel/core": "latest",
-    "@babel/preset-env": "latest",
-    "cypress": "latest",
-    "eslint": "7.2.0",
-    "eslint-config-airbnb-base": "latest",
-    "eslint-plugin-import": "latest",
-    "husky": "latest",
-    "prettier": "latest",
-    "prettier-eslint": "latest",
-    "pretty-quick": "latest",
-    "sort-package-json": "latest"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged && npm run sort && npm run lint-fix",
-      "pre-push": "\nHave you run the Cypress tests?\n"
-    }
-  },
-  "scripts": {
-    "note": "You can run the first script by opening a PowerShell window here as Admin and typing: npm run prettier",
-    "lint": "eslint .",
-    "lint-fix": "eslint --fix .",
-    "prettier": "prettier --write .",
-    "cyop": "cypress open",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
-    "t1": "npx cypress run  --spec \"cypress/integration/dailyImage.spec.js\"",
-    "t2": "npx cypress run  --spec \"cypress/integration/dateTime.spec.js\"",
-    "t3": "npx cypress run  --spec \"cypress/integration/jokes.spec.js\"",
-    "t4": "npx cypress run  --spec \"cypress/integration/location.spec.js\"",
-    "test": "cypress open"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://professorcase@bitbucket.org/professorcase/chrome_new_tab_ext.git"
-  },
   "keywords": [
     "Chrome",
     "new",
@@ -59,9 +14,38 @@
     "cypress",
     "location"
   ],
-  "author": "Denise Case",
-  "license": "MIT",
   "homepage": "https://bitbucket.org/professorcase/chrome_new_tab_ext#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://professorcase@bitbucket.org/professorcase/chrome_new_tab_ext.git"
+  },
+  "license": "MIT",
+  "author": "Denise Case",
+  "main": "tab.html",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "cyop": "cypress open",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix .",
+    "note": "You can run the first script by opening a PowerShell window here as Admin and typing: npm run prettier",
+    "prettier": "prettier --write .",
+    "sort": "npx sort-package-json",
+    "t1": "npx cypress run  --spec \"cypress/integration/dailyImage.spec.js\"",
+    "t2": "npx cypress run  --spec \"cypress/integration/dateTime.spec.js\"",
+    "t3": "npx cypress run  --spec \"cypress/integration/jokes.spec.js\"",
+    "t4": "npx cypress run  --spec \"cypress/integration/location.spec.js\"",
+    "test": "cypress open"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && npm run sort && npm run lint-fix",
+      "pre-push": "\nHave you run the Cypress tests?\n"
+    }
+  },
   "prettier": {
     "semi": true,
     "singleQuote": true,
@@ -104,8 +88,22 @@
     },
     "globals": {
       "$": true,
-      "jQuery": true,
-      "workbox": true
+      "jQuery": true
     }
+  },
+  "dependencies": {
+    "axios": "latest",
+    "globals": "latest"
+  },
+  "devDependencies": {
+    "cypress": "^4.8.0",
+    "eslint": "7.2.0",
+    "eslint-config-airbnb-base": "latest",
+    "eslint-plugin-import": "latest",
+    "husky": "latest",
+    "prettier": "latest",
+    "prettier-eslint": "^11.0.0",
+    "pretty-quick": "latest",
+    "sort-package-json": "latest"
   }
 }
