@@ -32,15 +32,5 @@
     "<all_urls>",
     "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1"
   ],
-  "icons": {
-    "16": "./images/icons/favicon-16x16.png",
-    "32": "./images/icons/favicon-32x32.png",
-    "36": "./images/icons/android-chrome-36x36.png",
-    "48": "./images/icons/android-chrome-48x48.png",
-    "72": "./images/icons/android-chrome-72x72.png",
-    "96": "./images/icons/android-chrome-96x96.png",
-    "144": "./images/icons/android-chrome-144x144.png",
-    "192": "./images/icons/android-chrome-192x192.png"
-  },
   "web_accessible_resources": ["./favicon.ico"]
 }
