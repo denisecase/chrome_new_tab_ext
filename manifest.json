@@ -1,12 +1,13 @@
 {
-  "name": "ChomeHome: New Tab Extension",
-  "short_name": "ChromeHome",
-  "version": "0.1",
+  "name": "NWCase: New Tab Extension",
+  "title": "NWCase: New Tab Extension",
+  "short_name": "NWCaseNT",
+  "version": "0.2",
   "manifest_version": 2,
   "description": "A simple Chrome new tab extension to start the semester.",
   "browser_action": {
-    "default_icon": "./images/icons/android-chrome-36x36.png",
-    "default_title": "ChromeHome: New Tab Extension"
+    "default_icon": "./icon_36.png",
+    "default_title": "NWCase: New Tab Extension"
   },
   "author": "Denise Case",
   "chrome_url_overrides": {
