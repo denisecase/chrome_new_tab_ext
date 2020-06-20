@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+.bgimg {
+  background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg');
+  height: 100%;
+  opacity: 0.9;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* fixed in viewport */
+}
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+nav {
+  margin: 0.1em;
+}
+article {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 5vh;
+}
+article > div {
+  margin: 0.5em;
+}
+#clockbox {
+  font-size: 3rem;
+  color: #fff;
+}
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  margin-right: 0.5em;
+  color: #fff;
+}
+a:link:hover {
+  background-color: grey;
+}
+#art {
+  background-color: lightgray;
+  border-style: inset;
+}

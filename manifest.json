@@ -1,0 +1,46 @@
+{
+  "name": "ChomeHome: New Tab Extension",
+  "short_name": "ChromeHome",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "A simple Chrome new tab extension to start the semester.",
+  "browser_action": {
+    "default_icon": "./images/icons/android-chrome-36x36.png",
+    "default_title": "ChromeHome: New Tab Extension"
+  },
+  "author": "Denise Case",
+  "chrome_url_overrides": {
+    "newtab": "tab.html"
+  },
+  "file_system_provider_capabilities": {
+    "configurable": true,
+    "multiple_mounts": true,
+    "source": "network"
+  },
+  "homepage_url": "http://denisecase.github.io/",
+  "incognito": "spanning",
+  "offline_enabled": true,
+  "omnibox": {
+    "keyword": "aString"
+  },
+  "permissions": [
+    "storage",
+    "alarms",
+    "notifications",
+    "tabs",
+    "geolocation",
+    "<all_urls>",
+    "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1"
+  ],
+  "icons": {
+    "16": "./images/icons/favicon-16x16.png",
+    "32": "./images/icons/favicon-32x32.png",
+    "36": "./images/icons/android-chrome-36x36.png",
+    "48": "./images/icons/android-chrome-48x48.png",
+    "72": "./images/icons/android-chrome-72x72.png",
+    "96": "./images/icons/android-chrome-96x96.png",
+    "144": "./images/icons/android-chrome-144x144.png",
+    "192": "./images/icons/android-chrome-192x192.png"
+  },
+  "web_accessible_resources": ["./favicon.ico"]
+}

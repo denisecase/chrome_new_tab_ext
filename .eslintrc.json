@@ -1,0 +1,32 @@
+{
+  "env": {
+    "browser": true,
+    "mocha": true,
+    "es6": true,
+    "cypress/globals": true
+  },
+  "extends": ["standard", "plugin:cypress/recommended"],
+  "globals": {
+    "$": true,
+    "jQuery": true,
+    "workbox": true,
+    "axios": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["cypress", "chai-friendly"],
+  "rules": {
+    "no-unused-expressions": 0,
+    "chai-friendly/no-unused-expressions": 2,
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ]
+  }
+}
