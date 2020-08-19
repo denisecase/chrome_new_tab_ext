@@ -34,7 +34,7 @@ const tmonth = [
   'Dec'
 ]
 const springStartWeekNumber = 2
-const fallStartWeekNumber = 34
+const fallStartWeekNumber = 33
 const weeksPerTerm = 17
 
 /**
@@ -99,8 +99,11 @@ export function getFocus(nday, nhour) {
   else if (nday === 2 || nday === 4) {
     t = def
   } 
-  else {
+  else if (nday === 6 || nday === 7) {
     t = weekend
+  }
+  else {
+    t = def
   }
   return t
 }
