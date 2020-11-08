@@ -6,16 +6,16 @@
  * @author Denise Case
  */
 
-const jokeURI = 'https://api.icndb.com/jokes/random?limitTo=[nerdy]'
+const jokeURI = 'https://api.icndb.com/jokes/random?limitTo=[nerdy]';
 
 export default async function getJoke() {
   try {
-    const response = await fetch(jokeURI)
-    const obj = await response.json()
-    console.log(`FETCHED. Response JSON ${obj}`)
-    const joke = obj.value.joke || 'No joke for you.'
-    return joke
+    const response = await fetch(jokeURI);
+    const obj = await response.json();
+    console.log(`FETCHED. Response JSON ${obj}`);
+    const joke = obj.value.joke || 'No joke for you.';
+    return joke;
   } catch (error) {
-    return error
+    return error;
   }
 }

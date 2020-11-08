@@ -1,4 +1,5 @@
-import getJoke from '../../scripts/jokes.js';
+import { context, describe, it, expect } from 'cypress';
+import getJoke from '../../scripts/jokes';
 
 context('jokes', async () => {
   describe('Chrome new tab extension (getJoke) ', async () => {

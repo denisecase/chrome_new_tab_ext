@@ -6,7 +6,7 @@
  * @author Denise Case
  */
 
-const bingURL = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1'
+const bingURL = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1';
 
 /**
  * Update background image with Bing Image of the Day
@@ -14,13 +14,11 @@ const bingURL = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1'
  */
 export default async function getDailyImage() {
   try {
-    const response = await fetch(bingURL)
-    const obj = await response.json()
-    console.log(`FETCHED. Response JSON ${obj}`)
-    console.dir(obj)
-    const imageURL = `http://bing.com/${obj.images[0].url}` || 'not found'
-    return imageURL
+    const response = await fetch(bingURL);
+    const obj = await response.json();
+    const imageURL = `http://bing.com/${obj.images[0].url}` || 'not found';
+    return imageURL;
   } catch (error) {
-    console.error(error)
+    return 'Error getting background image.';
   }
 }

@@ -67,25 +67,23 @@
       "node": true
     },
     "parserOptions": {
-      "ecmaVersion": 11,
+      "ecmaVersion": 2017,
       "sourceType": "module"
     },
     "extends": [
       "airbnb-base"
     ],
     "rules": {
-      "no-console": [
-        "error",
-        {
-          "allow": [
-            "warn",
-            "error"
-          ]
-        }
-      ]
+      "no-console": "warn",
+      "no-use-before-define": "warn",
+      "no-param-reassign": "warn",
+      "no-unused-vars": "warn",
+      "no-unused-expressions": "warn",
+      "no-multi-assign": "warn"
     },
     "globals": {
       "$": true,
+      "cy": true,
       "jQuery": true
     }
   },
@@ -94,13 +92,13 @@
     "globals": "latest"
   },
   "devDependencies": {
-    "cypress": "^4.8.0",
-    "eslint": "7.2.0",
+    "cypress": "latest",
+    "eslint": "latest",
     "eslint-config-airbnb-base": "latest",
     "eslint-plugin-import": "latest",
     "husky": "latest",
     "prettier": "latest",
-    "prettier-eslint": "^11.0.0",
+    "prettier-eslint": "latest",
     "pretty-quick": "latest",
     "sort-package-json": "latest"
   }

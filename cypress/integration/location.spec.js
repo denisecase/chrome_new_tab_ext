@@ -1,4 +1,5 @@
-import getLocation from '../../scripts/location.js';
+import { context, describe, it, expect } from 'cypress';
+import getLocation from '../../scripts/location';
 
 context('location', () => {
   describe('Chrome new tab extension (getLocation) ', () => {

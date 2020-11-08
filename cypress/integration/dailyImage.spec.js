@@ -1,4 +1,5 @@
-import * as dailyImage from '../../scripts/dateTime.js';
+import { context, describe, it, expect } from 'cypress';
+import * as dailyImage from '../../scripts/dateTime';
 
 context('dailyImage', () => {
   describe('Chrome new tab extension (getDailyImage) ', () => {
