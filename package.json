@@ -44,49 +44,6 @@
       "pre-push": "\nHave you run the Cypress tests?\n"
     }
   },
-  "prettier": {
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "all",
-    "overrides": [
-      {
-        "files": [
-          "*.html",
-          "*.js*",
-          "*.md",
-          "web-components/*.js",
-          "scripts/*.js"
-        ]
-      }
-    ]
-  },
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "es2020": true,
-      "node": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 2017,
-      "sourceType": "module"
-    },
-    "extends": [
-      "airbnb-base"
-    ],
-    "rules": {
-      "no-console": "warn",
-      "no-use-before-define": "warn",
-      "no-param-reassign": "warn",
-      "no-unused-vars": "warn",
-      "no-unused-expressions": "warn",
-      "no-multi-assign": "warn"
-    },
-    "globals": {
-      "$": true,
-      "cy": true,
-      "jQuery": true
-    }
-  },
   "dependencies": {
     "axios": "latest",
     "globals": "latest"
@@ -95,11 +52,12 @@
     "cypress": "latest",
     "eslint": "latest",
     "eslint-config-airbnb-base": "latest",
+    "eslint-config-prettier": "latest",
     "eslint-plugin-import": "latest",
+    "eslint-plugin-prettier": "latest",
+    "eslint-plugin-security": "latest",
     "husky": "latest",
     "prettier": "latest",
-    "prettier-eslint": "latest",
-    "pretty-quick": "latest",
     "sort-package-json": "latest"
   }
 }

@@ -6,18 +6,15 @@
  * @author Denise Case
  */
 
-const bingURL = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1';
+const unsplashURL = 'https://source.unsplash.com/collection/928423/random';
 
 /**
- * Update background image with Bing Image of the Day
+ * Get new image URL
  * @returns Promise
  */
 export default async function getDailyImage() {
   try {
-    const response = await fetch(bingURL);
-    const obj = await response.json();
-    const imageURL = `http://bing.com/${obj.images[0].url}` || 'not found';
-    return imageURL;
+    return unsplashURL;
   } catch (error) {
     return 'Error getting background image.';
   }

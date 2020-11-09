@@ -3,11 +3,11 @@
  * Illustrates basic HTML, CSS, JavaScript, JSON.
  * @module tab
  */
-import addBall from './canvas';
-import getDailyImage from './dailyImage';
-import * as dateTime from './dateTime';
-import getJoke from './jokes';
-import getLocation from './location';
+import addBall from './canvas.js';
+import getDailyImage from './dailyImage.js';
+import * as dateTime from './dateTime.js';
+import getJoke from './jokes.js';
+import getLocation from './location.js';
 
 /**
  * Logic to execute each time the new tab loads.

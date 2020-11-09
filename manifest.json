@@ -2,7 +2,7 @@
   "name": "NWCase: New Tab Extension",
   "title": "NWCase: New Tab Extension",
   "short_name": "NWCaseNT",
-  "version": "0.2",
+  "version": "0.3",
   "manifest_version": 2,
   "description": "A simple Chrome new tab extension to start the semester.",
   "browser_action": {
@@ -25,11 +25,9 @@
     "keyword": "aString"
   },
   "permissions": [
-    "storage",
-    "alarms",
-    "notifications",
     "tabs",
     "geolocation",
+    "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1",
     "<all_urls>",
     "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1"
   ],
