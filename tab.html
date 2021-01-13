@@ -1,559 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="IE=edge" />
-    <meta name="author" content="Denise Case" />
-    <meta name="description" content="Chrome New Tab Extension Custom" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>New Tab</title>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta name="author" content="Denise Case" />
+  <meta name="description" content="Chrome New Tab Extension Custom" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Get current Pure CSS from https://purecss.io/start/ -->
+  <title>New Tab</title>
 
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
-      integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47"
-      crossorigin="anonymous"
-    />
+  <!-- Get current Pure CSS from https://purecss.io/start/ -->
 
-    <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
+    integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous" />
+
+  <!--[if lte IE 8]>
       <link
         rel="stylesheet"
         href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-old-ie-min.css"
       />
     <![endif]-->
-    <!--[if gt IE 8]><!-->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css"
-    />
-    <!--<![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css" />
+  <!--<![endif]-->
 
-    <!-- Custom styles -->
+  <!-- Custom styles -->
 
-    <link rel="stylesheet" href="./styles/tab.css" />
+  <link rel="stylesheet" href="./styles/tab.css" />
 
-    <!-- Icons -->
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="144x144"
-      href="./images/icons/apple-touch-icon-144-precomposed.png"
-    />
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="icon" href="favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="./images/icons/apple-touch-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="./images/icons/apple-touch-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="./images/icons/apple-touch-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="./images/icons/apple-touch-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="./images/icons/apple-touch-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="./images/icons/apple-touch-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="./images/icons/apple-touch-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="./images/icons/apple-touch-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./images/icons/apple-touch-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="./images/icons/android-chrome-48x48.png"
-      sizes="48x48"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="./images/icons/favicon-32x32.png"
-      sizes="32x32"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="./images/icons/android-chrome-192x192.png"
-      sizes="192x192"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="./images/icons/favicon-96x96.png"
-      sizes="96x96"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="./images/icons/favicon-16x16.png"
-      sizes="16x16"
-    />
-    <link rel="manifest" href="./manifest.json" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta
-      name="msapplication-TileImage"
-      content="./images/icons/mstile-144x144.png"
-    />
-    <meta name="theme-color" content="#da532c" />
-  </head>
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./images/icons/apple-touch-icon-144-precomposed.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" sizes="57x57" href="./images/icons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="./images/icons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="./images/icons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="./images/icons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="./images/icons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="./images/icons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="./images/icons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="./images/icons/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-touch-icon-180x180.png" />
+  <link rel="icon" type="image/png" href="./images/icons/android-chrome-48x48.png" sizes="48x48" />
+  <link rel="icon" type="image/png" href="./images/icons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="./images/icons/android-chrome-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="./images/icons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="./images/icons/favicon-16x16.png" sizes="16x16" />
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="msapplication-TileImage" content="./images/icons/mstile-144x144.png" />
+  <meta name="theme-color" content="#da532c" />
+</head>
 
-  <body class="bgimg" id="background">
-    <main>
-      <nav class="links">
-        <!-- start links grid -->
-        <div class="pure-g">
-          <div class="pure-u-1">
-            <nav>
-              Northwest Missouri State University | 800 University Drive |
-              Maryville, MO 64468 | 660.562.1212 | 660.562.1136 | CH 2280
-            </nav>
-            <nav>
-              <a
-                rel="noopener"
-                target="_blank"
-                href="http://ksucase.github.io/todo5/"
-                >TODO</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://mail.google.com/mail/u/0/#inbox"
-                >Gmail</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://mail.google.com/mail/u/0/#inbox?compose=new"
-                >New</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://contacts.google.com/"
-                >Contacts</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://drive.google.com/drive/my-drive"
-                >Drive</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://calendar.google.com/calendar/r"
-                >Calendar</a
-              >
-              <a rel="noopener" target="_blank" href="https://habitica.com/"
-                >Habitica</a
-              >
-            </nav>
+<body class="bgimg" id="background">
+  <main>
+    <nav class="links">
+      <!-- start links grid -->
+      <div class="pure-g">
+        <div class="pure-u-1">
+          <nav>
+            Northwest Missouri State University | 800 University Drive |
+            Maryville, MO 64468 | 660.562.1212 | 660.562.1136 | CH 2280
+          </nav>
+          <nav>
+            <a rel="noopener" target="_blank" href="http://ksucase.github.io/todo5/">TODO</a>
+            <a rel="noopener" target="_blank" href="https://mail.google.com/mail/u/0/#inbox">Gmail</a>
+            <a rel="noopener" target="_blank" href="https://mail.google.com/mail/u/0/#inbox?compose=new">New</a>
+            <a rel="noopener" target="_blank" href="https://contacts.google.com/">Contacts</a>
+            <a rel="noopener" target="_blank" href="https://drive.google.com/drive/my-drive">Drive</a>
+            <a rel="noopener" target="_blank" href="https://calendar.google.com/calendar/r">Calendar</a>
+            <a rel="noopener" target="_blank" href="https://habitica.com/">Habitica</a>
+          </nav>
 
-            <nav>
-              <a rel="noopener" target="_blank" href="http://nwmissouri.edu/"
-                >NW:</a
-              >
+          <nav>
+            <a rel="noopener" target="_blank" href="http://nwmissouri.edu/">NW:</a>
 
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://ssb.nwmissouri.edu/pls/PRODDAD/nwcrse.P_Showschedule"
-                >Sched</a
-              >
+            <a rel="noopener" target="_blank"
+              href="https://ssbprod.nwmissouri.edu/PROD/nwcrse.P_Showschedule">Sched</a>
 
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://www.nwmissouri.edu/registrar/finals.htm"
-                >Finals</a
-              >
+            <a rel="noopener" target="_blank" href="https://www.nwmissouri.edu/registrar/finals.htm">Finals</a>
 
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://ssb.nwmissouri.edu/pls/PRODDAD/twbkwbis.P_WWWLogin"
-                >CatPaws</a
-              >
+            <a rel="noopener" target="_blank"
+              href="https://ssbprod.nwmissouri.edu/PROD/twbkwbis.P_WWWLogin">CatPaws</a>
 
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://nwmissouri.instructure.com/courses/803"
-                >Senate</a
-              >
+            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/803">Senate</a>
 
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://nwmissouri.instructure.com/courses/4101"
-                >Core</a
-              >
+            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/4101">Core</a>
 
-              <a
-                rel="noopener"
-                target="_blank"
-                href="http://www.nwmissouri.edu/csis/index.htm"
-                >CSIS:</a
-              >
+            <a rel="noopener" target="_blank" href="http://www.nwmissouri.edu/csis/index.htm">CSIS:</a>
 
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://nwmissouri.instructure.com/courses/5555"
-                >Canvas</a
-              >
+            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/5555">Canvas</a>
 
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://nwmissouri.instructure.com/courses/8431"
-                >LessonsLibrary</a
-              >
+            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/8431">LessonsLibrary</a>
 
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://nwmissouri.instructure.com/courses/16155"
-                >ChromeHome</a
-              >
+            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/16155">ChromeHome</a>
 
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://bitbucket.org/sigcse2018/chrome_home_nwmsu"
-                >Repo</a
-              >
+            <a rel="noopener" target="_blank" href="https://bitbucket.org/sigcse2018/chrome_home_nwmsu">Repo</a>
 
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://nwmissouri.instructure.com/courses/19958"
-                >Advisees
+            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/19958">Advisees
+            </a>
+          </nav>
+
+          <nav id="2020 Fall"> 2020 Fall
+            <a rel="noopener" target="_blank"
+              href="https://nwmissouri.instructure.com/courses/32360">691-02-8AM-1700</a>
+
+            <a rel="noopener" target="_blank"
+              href="https://nwmissouri.instructure.com/courses/32363">386-01-9AM-1150</a>
+
+            <a rel="noopener" target="_blank"
+              href="https://nwmissouri.instructure.com/courses/32472">563-02-11AM-1200</a>
+
+            <a rel="noopener" target="_blank"
+              href="https://nwmissouri.instructure.com/courses/32423">517-01-2PM-3400</a>
+
+            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/33865">44-608
+              (fundamentals)</a>
+          </nav>
+
+          <nav id="2021 Spring"> 2021 SPRING
+            <a rel="noopener" target="_blank"
+              href="https://nwmissouri.instructure.com/courses/35916">692-03-9AM-1700</a>
+
+            <a rel="noopener" target="_blank"
+              href="https://nwmissouri.instructure.com/courses/36074">517-01/02-2PM-3400</a>
+
+            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/36101">44-608 -08/81
+              (fundamentals)</a>
+              <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/36101">44-608 -81
               </a>
-            </nav>
+          </nav>
 
-            <nav>
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://nwmissouri.instructure.com/courses/32360"
-                >691-02-8AM-1700</a
-              >
+          <nav id="2021 Summer"> 2021 Summer
+            <a rel="noopener" target="_blank"
+              href="https://nwmissouri.instructure.com/courses/32360">691-02-8AM-1700</a>
+          </nav>
 
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://nwmissouri.instructure.com/courses/32363"
-                >386-01-9AM-1150</a
-              >
+          <nav id="2021 Fall"> 2021 Fall
+            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/32360">GDP1
+              691-02-8AM-1700</a>
 
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://nwmissouri.instructure.com/courses/32472"
-                >563-02-11AM-1200</a
-              >
+            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/32363">DFIR
+              386-01-9AM-1150</a>
 
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://nwmissouri.instructure.com/courses/32423"
-                >517-01-2PM-3400</a
-              >
+            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/32472">NEW OOP
+              241-01-11AM-1400</a>
 
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://nwmissouri.instructure.com/courses/33865"
-                >44-608 (fundamentals)</a
-              >
-            </nav>
+            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/33865">ONLINE 44-608
+              (fundamentals)</a>
 
-            <nav>
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://denisecase.github.io/44-691-gdp1-syllabus/"
-                >691-Syllabus</a
-              >
+            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/32423">NO
+              517-01-2PM-3400</a>
 
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://denisecase.github.io/44-386-digital-forensics-syllabus/"
-                >386-Syllabus</a
-              >
+          </nav>
 
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://denisecase.github.io/44-563-webapps-syllabus/"
-                >563-Syllabus</a
-              >
+          <nav id="syllabus">
 
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://denisecase.github.io/44-517-bigdata-syllabus/"
-                >517-Syllabus</a
-              >
-            </nav>
+            <a rel="noopener" target="_blank"
+              href="https://denisecase.github.io/44-241-programming2-syllabus/">241-Syllabus</a>
+            <a rel="noopener" target="_blank"
+              href="https://denisecase.github.io/44-386-digital-forensics-syllabus/">Inperson 386-Syllabus</a>
+            <a rel="noopener" target="_blank"
+              href="https://denisecase.github.io/44-386-digital-forensics-syllabus/">Online 386-Syllabus</a>
+            <a rel="noopener" target="_blank"
+              href="https://denisecase.github.io/44-563-webapps-syllabus/">563-Syllabus</a>
+            <a rel="noopener" target="_blank"
+              href="https://denisecase.github.io/44-517-bigdata-syllabus/">517-Syllabus</a>
+            <a rel="noopener" target="_blank"
+              href="https://nwmissouri.instructure.com/courses/33865/assignments/syllabus">Online 608-Syllabus</a>
+            <a rel="noopener" target="_blank" href="https://denisecase.github.io/44-691-gdp1-syllabus/">691-Syllabus</a>
+            <a rel="noopener" target="_blank" href="https://denisecase.github.io/44-692-gdp2-syllabus/">692-Syllabus</a>
+          </nav>
 
-            <nav>
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://nwmissouri.instructure.com/courses/26938"
-                >Student Speakers</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://nwmissouri.instructure.com/courses/8421"
-                >ACM-G</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://www.nwmissouri.edu/academics/grants/index.htm"
-                >NW Grants:</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://www.nwmissouri.edu/academics/pdf/grants/ProcessFlowchrt.pdf"
-                >Process</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://www.nsf.gov/funding/"
-                >MSF</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="http://198.209.246.206:8080/login.jsp"
-                >NW JIRA</a
-              >
-              <a rel="noopener" target="_blank" href="http://www.acm.org/"
-                >ACM</a
-              >
+          <nav>
+            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/26938">Student
+              Speakers</a>
+            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/8421">ACM-G</a>
+            <a rel="noopener" target="_blank" href="https://www.nwmissouri.edu/academics/grants/index.htm">NW
+              Grants:</a>
+            <a rel="noopener" target="_blank"
+              href="https://www.nwmissouri.edu/academics/pdf/grants/ProcessFlowchrt.pdf">Process</a>
+            <a rel="noopener" target="_blank" href="https://www.nsf.gov/funding/">MSF</a>
+            <a rel="noopener" target="_blank" href="http://198.209.246.206:8080/login.jsp">NW JIRA</a>
+            <a rel="noopener" target="_blank" href="http://www.acm.org/">ACM</a>
 
-              <a
-                rel="noopener"
-                target="_blank"
-                href="http://ezproxy.nwmissouri.edu:2048/login?url=http://dl.acm.org/dl.cfm?CFID=802038853&CFTOKEN=84892964"
-                >NW ACM DL</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="http://ezproxy.nwmissouri.edu:2176/dl.cfm"
-                >NW ACM DL</a
-              >
-            </nav>
+            <a rel="noopener" target="_blank"
+              href="http://ezproxy.nwmissouri.edu:2048/login?url=http://dl.acm.org/dl.cfm?CFID=802038853&CFTOKEN=84892964">NW
+              ACM DL</a>
+            <a rel="noopener" target="_blank" href="http://ezproxy.nwmissouri.edu:2176/dl.cfm">NW ACM DL</a>
+          </nav>
 
-            <nav>
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://www.overleaf.com/project/5d5463d2e623944f84f36e77"
-                >OVERLEAF-PRO-DEV</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://www.overleaf.com/project/5d4cba21945b8e6736e211ea"
-                >OVERLEAF-GDP</a
-              >
+          <nav>
+            <a rel="noopener" target="_blank"
+              href="https://www.overleaf.com/project/5d5463d2e623944f84f36e77">OVERLEAF-PRO-DEV</a>
+            <a rel="noopener" target="_blank"
+              href="https://www.overleaf.com/project/5d4cba21945b8e6736e211ea">OVERLEAF-GDP</a>
 
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://sigcse2020.sigcse.org/authors/papers.html"
-                >Paper GDP</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://sigcse2020.sigcse.org/authors/papers.html"
-                >Paper Active Learning</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://sigcse2020.sigcse.org/authors/workshops.html"
-                >WS Alexa</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://sigcse2020.sigcse.org/authors/workshops.html"
-                >WS Chocolatey</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://sigcse2020.sigcse.org/authors/workshops.html"
-                >WS PWA Syllabus</a
-              >
-            </nav>
+            <a rel="noopener" target="_blank" href="https://sigcse2020.sigcse.org/authors/papers.html">Paper GDP</a>
+            <a rel="noopener" target="_blank" href="https://sigcse2020.sigcse.org/authors/papers.html">Paper Active
+              Learning</a>
+            <a rel="noopener" target="_blank" href="https://sigcse2020.sigcse.org/authors/workshops.html">WS Alexa</a>
+            <a rel="noopener" target="_blank" href="https://sigcse2020.sigcse.org/authors/workshops.html">WS
+              Chocolatey</a>
+            <a rel="noopener" target="_blank" href="https://sigcse2020.sigcse.org/authors/workshops.html">WS PWA
+              Syllabus</a>
+          </nav>
 
-            <nav>
-              <a rel="noopener" target="_blank" href="https://bitbucket.org/"
-                >BitBucket:</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://bitbucket.org/professorcase/"
-              >
-                professorcase
-              </a>
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://bitbucket.org/denisecase/"
-              >
-                denisecase
-              </a>
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://bitbucket.org/ksucase/"
-                >ksucase</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://professorcase@bitbucket.org/professorcase/chrome_new_tab_ext/"
-                >chrome_new_tab_ext</a
-              >
-            </nav>
+          <nav>
+            <a rel="noopener" target="_blank" href="https://bitbucket.org/">BitBucket:</a>
+            <a rel="noopener" target="_blank" href="https://bitbucket.org/professorcase/">
+              professorcase
+            </a>
+            <a rel="noopener" target="_blank" href="https://bitbucket.org/denisecase/">
+              denisecase
+            </a>
+            <a rel="noopener" target="_blank" href="https://bitbucket.org/ksucase/">ksucase</a>
+            <a rel="noopener" target="_blank"
+              href="https://professorcase@bitbucket.org/professorcase/chrome_new_tab_ext/">chrome_new_tab_ext</a>
+          </nav>
 
-            <nav>
-              <a rel="noopener" target="_blank" href="https://github.com/"
-                >GitHub:</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://github.com/profcase/"
-                >profcase</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://github.com/denisecase/"
-                >denisecase</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://github.com/ksucase/"
-                >ksucase</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://developer.amazon.com/alexa/console/ask"
-                >Alexa-Dev</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://console.aws.amazon.com/billing/home#/"
-                >AWS</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://portal.azure.com/#@nwmissouri.onmicrosoft.com/dashboard/private/aa5c011e-e75c-4464-9b24-e77512b8800f"
-                >Azure</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://console.cloud.google.com/home/dashboard"
-                >GCP</a
-              >
-              <a
-                rel="noopener"
-                target=" _blank"
-                href="https://console.firebase.google.com/?pli=1"
-                >Firebase</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="http://198.209.246.206:8080/login.jsp"
-                >NW-JIRA</a
-              >
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://cs07.nwmissouri.edu:8006"
-                >NW-Proxmox</a
-              >
-            </nav>
-          </div>
-          <!-- end col -->
+          <nav>
+            <a rel="noopener" target="_blank" href="https://github.com/">GitHub:</a>
+            <a rel="noopener" target="_blank" href="https://github.com/profcase/">profcase</a>
+            <a rel="noopener" target="_blank" href="https://github.com/denisecase/">denisecase</a>
+            <a rel="noopener" target="_blank" href="https://github.com/ksucase/">ksucase</a>
+            <a rel="noopener" target="_blank" href="https://developer.amazon.com/alexa/console/ask">Alexa-Dev</a>
+            <a rel="noopener" target="_blank" href="https://console.aws.amazon.com/billing/home#/">AWS</a>
+            <a rel="noopener" target="_blank"
+              href="https://portal.azure.com/#@nwmissouri.onmicrosoft.com/dashboard/private/aa5c011e-e75c-4464-9b24-e77512b8800f">Azure</a>
+            <a rel="noopener" target="_blank" href="https://console.cloud.google.com/home/dashboard">GCP</a>
+            <a rel="noopener" target=" _blank" href="https://console.firebase.google.com/?pli=1">Firebase</a>
+            <a rel="noopener" target="_blank" href="http://198.209.246.206:8080/login.jsp">NW-JIRA</a>
+            <a rel="noopener" target="_blank" href="https://cs07.nwmissouri.edu:8006">NW-Proxmox</a>
+          </nav>
         </div>
-        <!-- end links grid -->
-      </nav>
+        <!-- end col -->
+      </div>
+      <!-- end links grid -->
+    </nav>
 
-      <article class=" caption">
-        <div id="clockbox"></div>
-        <div class="border" id="greeting">Hello!</div>
-        <div id="location">Welcome <span id="locationAnswer">?</span></div>
+    <article class=" caption">
+      <div id="clockbox"></div>
+      <div class="border" id="greeting">Hello!</div>
+      <div id="location">Welcome <span id="locationAnswer">?</span></div>
 
-        <div>
-          <span class="border" id="focus">My focus</span> &#9670;
-          <span class="border" id="week">My week</span>
-        </div>
+      <div>
+        <span class="border" id="focus">My focus</span> &#9670;
+        <span class="border" id="week">My week</span>
+      </div>
 
-        <div id="smile">:)</div>
-        <canvas id="art"></canvas>
-      </article>
-    </main>
-    <!-- paths are root-relative -->
+      <div id="smile">:)</div>
+      <canvas id="art"></canvas>
+    </article>
+  </main>
+  <!-- paths are root-relative -->
 
-    <script type="module" src="./scripts/canvas.js"></script>
-    <script type="module" src="./scripts/dailyImage.js"></script>
-    <script type="module" src="./scripts/dateTime.js"></script>
-    <script type="module" src="./scripts/location.js"></script>
-    <script type="module" src="./scripts/tab.js"></script>
-    <script type="module" src="./scripts/jokes.js"></script>
-  </body>
+  <script type="module" src="./scripts/canvas.js"></script>
+  <script type="module" src="./scripts/dailyImage.js"></script>
+  <script type="module" src="./scripts/dateTime.js"></script>
+  <script type="module" src="./scripts/location.js"></script>
+  <script type="module" src="./scripts/tab.js"></script>
+  <script type="module" src="./scripts/jokes.js"></script>
+</body>
+
 </html>
