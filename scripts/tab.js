@@ -14,7 +14,7 @@ import getLocation from './location.js';
  * Includes a recurring update every n milliseconds.
  */
 
-(function() {
+(function () {
   // assign display elements .............................................
 
   const backgroundElement = document.getElementById('background');
@@ -27,13 +27,27 @@ import getLocation from './location.js';
   const locationAnswerElement = document.getElementById('locationAnswer');
   const canvasElement = document.getElementById('art');
 
-  // configure event listeners .............................................
+  // helper functions.................................................
 
-  jokeElement.addEventListener('dblclick', smileHandler);
-  locationElement.addEventListener('click', locationHandler);
-  locationElement.addEventListener('mouseenter', locationHandler);
-  canvasElement.addEventListener('dblclick', canvasHandler);
-  console.log('done assigning handlers ....');
+  /**
+     * Set background image to imageURL
+     * @param {String} imageURL
+     * @param {Element} element to update
+     */
+  function updateBackgroundImage(imageURL, el) {
+    el.style.backgroundImage = `url("${imageURL}"`;
+  }
+
+  async function updateDisplayImage(el) {
+    const imageURL = await getDailyImage();
+    if (imageURL !== undefined) {
+      updateBackgroundImage(imageURL, el);
+    }
+  }
+
+  function updateWeekText(i, el, num) {
+    el.innerHTML = `Week ${i} of ${num}`;
+  }
 
   // define event handlers .........................................................
 
@@ -87,25 +101,11 @@ import getLocation from './location.js';
     refreshMilliseconds,
   );
 
-  // helper functions.................................................
+  // configure event listeners .............................................
 
-  async function updateDisplayImage(el) {
-    const imageURL = await getDailyImage();
-    if (imageURL !== undefined) {
-      updateBackgroundImage(imageURL, el);
-    }
-  }
-
-  function updateWeekText(i, el, num) {
-    el.innerHTML = `Week ${i} of ${num}`;
-  }
-
-  /**
-   * Set background image to imageURL
-   * @param {String} imageURL
-   * @param {Element} element to update
-   */
-  function updateBackgroundImage(imageURL, el) {
-    el.style.backgroundImage = `url("${imageURL}"`;
-  }
-})();
+  jokeElement.addEventListener('dblclick', smileHandler);
+  locationElement.addEventListener('click', locationHandler);
+  locationElement.addEventListener('mouseenter', locationHandler);
+  canvasElement.addEventListener('dblclick', canvasHandler);
+  console.log('done assigning handlers ....');
+}());

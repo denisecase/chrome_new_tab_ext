@@ -38,6 +38,7 @@ a:active {
   text-decoration: none;
   margin-right: 0.5em;
   color: #fff;
+  font-size: .8rem;
 }
 a:link:hover {
   background-color: grey;

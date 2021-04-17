@@ -10,7 +10,7 @@
  * https://stackoverflow.com/questions/6117814/get-week-of-year-in-javascript-like-in-php/6117889#6117889
  */
 // eslint-disable-next-line no-extend-native
-Date.prototype.getWeekNumber = function() {
+Date.prototype.getWeekNumber = function () {
   const onejan = new Date(this.getFullYear(), 0, 1);
   const millisecsInDay = 86400000;
   return Math.ceil(
@@ -38,6 +38,25 @@ const tmonth = [
 const springStartWeekNumber = 2;
 const fallStartWeekNumber = 33;
 const weeksPerTerm = 17;
+
+export function convertTo12Hour(nhour) {
+  let ap;
+  let hr;
+  if (nhour === 0) {
+    ap = ' AM';
+    hr = 12;
+  } else if (nhour < 12) {
+    ap = ' AM';
+    hr = nhour;
+  } else if (nhour === 12) {
+    ap = ' PM';
+    hr = nhour;
+  } else if (nhour > 12) {
+    ap = ' PM';
+    hr = nhour - 12;
+  }
+  return { ap, hr };
+}
 
 /**
  * Get information to be presented in a clock view.
@@ -106,23 +125,4 @@ export function getSchoolWeek() {
   const startweek = nmonth < 5 ? springStartWeekNumber : fallStartWeekNumber;
   const schoolWeek = nweek - startweek;
   return schoolWeek;
-}
-
-export function convertTo12Hour(nhour) {
-  let ap;
-  let hr;
-  if (nhour === 0) {
-    ap = ' AM';
-    hr = 12;
-  } else if (nhour < 12) {
-    ap = ' AM';
-    hr = nhour;
-  } else if (nhour === 12) {
-    ap = ' PM';
-    hr = nhour;
-  } else if (nhour > 12) {
-    ap = ' PM';
-    hr = nhour - 12;
-  }
-  return { ap, hr };
 }

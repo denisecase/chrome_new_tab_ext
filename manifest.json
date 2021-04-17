@@ -27,9 +27,8 @@
   "permissions": [
     "tabs",
     "geolocation",
-    "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1",
     "<all_urls>",
-    "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1"
+    "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1"
   ],
   "web_accessible_resources": ["./favicon.ico"]
 }
