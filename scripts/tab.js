@@ -63,7 +63,9 @@ import getLocation from './location.js';
    * Wait to get location and then display it.
    */
   async function locationHandler() {
+    console.log('Triggered locationHandler ');
     const locText = await getLocation();
+    console.log(`locationHandler got response: ${locText}`);
     locationAnswerElement.innerHTML = locText;
   }
 
@@ -105,7 +107,7 @@ import getLocation from './location.js';
 
   jokeElement.addEventListener('dblclick', smileHandler);
   locationElement.addEventListener('click', locationHandler);
-  locationElement.addEventListener('mouseenter', locationHandler);
+  locationAnswerElement.addEventListener('click', locationHandler);
   canvasElement.addEventListener('dblclick', canvasHandler);
   console.log('done assigning handlers ....');
 }());

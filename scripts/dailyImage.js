@@ -6,32 +6,52 @@
  * @author Denise Case
  */
 
-// const unsplashURL = 'https://source.unsplash.com/collection/928423/random';
-// const bingImageURL = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1';
-const imageURLs = [
-  'https://img.buzzfeed.com/buzzfeed-static/static/2017-04/19/15/asset/buzzfeed-prod-fastlane-01/sub-buzz-7887-1492630453-6.jpg',
-  'https://img.buzzfeed.com/buzzfeed-static/static/2017-04/19/15/asset/buzzfeed-prod-fastlane-03/sub-buzz-6069-1492630255-3.jpg',
-  'https://img.buzzfeed.com/buzzfeed-static/static/2017-04/19/15/asset/buzzfeed-prod-fastlane-03/sub-buzz-6150-1492630238-1.jpg',
-];
+// URLs must be added to manifest.json and tab.html Content Security Policy
+const bingImageURL = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US';
+const bingBaseURL = 'http://bing.com/';
 
-/** Helper function to get random number between min, max */
-const randomNumber = (min, max) => {
-  console.log(`Calling randomNumber(${min},${max})`);
-  const dbl = (Math.random() * (max - min)) + min;
-  return Math.floor(dbl);
+const exampleResponseJSON = {
+  images: [{
+    startdate: '20211009',
+    fullstartdate: '202110090700',
+    enddate: '20211010',
+    url: '/th?id=OHR.SandhillApache_EN-US7367797025_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp',
+    urlbase: '/th?id=OHR.SandhillApache_EN-US7367797025',
+    copyright: 'Sandhill cranes and mallard ducks, Bosque del Apache National Wildlife Refuge, New Mexico (© Cathy & Gordon Illg/Jaynes Gallery/DanitaDelimont.com)',
+    copyrightlink: 'https://www.bing.com/search?q=sandhill+cranes&form=hpcapt&filters=HpDate%3a%2220211009_0700%22',
+    title: 'Birds of a feather',
+    quiz: '/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20211009_SandhillApache%22&FORM=HPQUIZ',
+    wp: true,
+    hsh: '09b58fb8a08044feba219f528e3b3ebd',
+    drk: 1,
+    top: 1,
+    bot: 1,
+    hs: [],
+  }],
+  tooltips: {
+    loading: 'Loading...',
+    previous: 'Previous image',
+    next: 'Next image',
+    walle: 'This image is not available to download as wallpaper.',
+    walls: 'Download this image. Use of this image is restricted to wallpaper only.',
+  },
 };
 
 /**
  * Get new image URL
- * @returns Promise
+ * @returns imageURL
  */
 export default async function getDailyImage() {
   try {
-    const randomIndex = randomNumber(0, imageURLs.length);
-    const imageURL = imageURLs[randomIndex];
-    console.log(`imageURL:${imageURL}`);
+    console.log(`Fetching image from ${bingImageURL}`);
+    console.log(`Example result: ${bingBaseURL}${exampleResponseJSON.images[0].url}`);
+    const response = await fetch(bingImageURL);
+    const obj = await response.json();
+    console.log(`FETCHED. Response JSON ${obj}`);
+    console.dir(obj);
+    const imageURL = `${bingBaseURL}${obj.images[0].url}` || 'not found';
+    console.log(`Actual result: ${imageURL}`);
     return imageURL;
-    // return unsplashURL;
   } catch (error) {
     return 'Error getting background image.';
   }

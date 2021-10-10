@@ -8,51 +8,66 @@
  * @author Denise Case
  */
 
+let locationText = '?';
+
+const schoolLocation = {
+  name: 'to school',
+  north: 40.359,
+  south: 40.3507181,
+  east: -94.8820898,
+  west: -94.8862633,
+};
+
+const options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0,
+};
+
+function inside(crd, bounds) {
+  console.log(`CHECKING inside ${bounds.name}`);
+  console.log(crd);
+  console.log(bounds);
+  console.log(crd.latitude > bounds.south);
+  console.log(crd.latitude < bounds.north);
+  console.log(crd.longitude > bounds.west);
+  console.log(crd.longitude < bounds.east);
+  const ans = crd.latitude > bounds.south
+    && crd.latitude < bounds.north
+    && crd.longitude > bounds.west
+    && crd.longitude < bounds.east;
+
+  console.log(`CHECKING ${bounds.name} ANS: ${ans}`);
+  return ans;
+}
+
+const success = (pos) => {
+  console.log(`success pos ${pos}`);
+  if (pos === undefined) {
+    return;
+  }
+  const crd = pos.coords;
+  if (inside(crd, schoolLocation)) {
+    locationText = schoolLocation.name;
+  } else {
+    locationText = 'whereever you are';
+  }
+};
+
+const error = (err) => {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+  error.location = '? (error getting geolocation)';
+  return error.location;
+};
+
 export default function getLocation() {
-  let locationText = '?';
-
   if (!navigator.geolocation) {
+    console.log("Browser doesn't support geolocation.");
     locationText = "? (browser doesn't support geolocation)";
-    return locationText;
+  } else {
+    console.log('Browser does support geolocation.');
+    navigator.geolocation.getCurrentPosition(success, error, options);
+    console.log(`locationText=${locationText}`);
   }
-
-  const schoolLocation = {
-    name: 'to school',
-    north: 40.359,
-    south: 40.3507181,
-    east: -94.8820898,
-    west: -94.8862633,
-  };
-
-  const options = {
-    enableHighAccuracy: true,
-    timeout: 5000,
-    maximumAge: 0,
-  };
-
-  function inside(crd, bounds) {
-    const ans = crd.latitude > bounds.south
-      && crd.latitude < bounds.north
-      && crd.longitude > bounds.west
-      && crd.longitude < bounds.east;
-    return ans;
-  }
-
-  const success = (pos) => {
-    if (pos === undefined) {
-      return;
-    }
-    const crd = pos.coords;
-    if (inside(crd, schoolLocation)) {
-      locationText = schoolLocation.name;
-    }
-  };
-
-  const error = () => {
-    error.location = '? (error getting geolocation)';
-    return error.location;
-  };
-
-  navigator.geolocation.getCurrentPosition(success, error, options);
   return locationText;
 }

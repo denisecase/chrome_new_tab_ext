@@ -7,20 +7,13 @@
   <meta name="author" content="Denise Case" />
   <meta name="description" content="Chrome New Tab Extension Custom" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta 
-  http-equiv="Content-Security-Policy" 
-  content=
-  "default-src 'self' ; script-src  chrome-extension://leokbfblgnnfcnjngcminalegpnddoog/; img-src https://mdbootstrap.com/ https://img.buzzfeed.com/ ">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' https://www.bing.com/ https://api.icndb.com/; script-src  chrome-extension://leokbfblgnnfcnjngcminalegpnddoog/; img-src https://mdbootstrap.com/ https://www.bing.com/ http://bing.com">
 
   <title>New Tab</title>
 
-  <!-- Get current Pure CSS from https://purecss.io/start/ 
-
-  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
-    integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous" /> -->
-
   <!-- Bootstrap CSS -->
-  <link  rel="stylesheet" href="./styles/bootstrap.min.css" >
+  <link rel="stylesheet" href="./styles/bootstrap.min.css">
 
   <!-- Custom styles -->
 
@@ -73,6 +66,8 @@
           <nav>
             <a rel="noopener" target="_blank" href="http://nwmissouri.edu/">NW:</a>
 
+            <a rel="noopener" target="_blank" href="https://www.nwmissouri.edu/academics/calendar.htm">Calendar</a>
+
             <a rel="noopener" target="_blank" href="https://ssbprod.nwmissouri.edu/PROD/nwcrse.P_Showschedule">Sched</a>
 
             <a rel="noopener" target="_blank" href="https://www.nwmissouri.edu/registrar/finals.htm">Finals</a>
@@ -97,56 +92,27 @@
             </a>
           </nav>
 
-          <!--
-          <nav id="2020 Fall"> 2020 Fall
-            <a rel="noopener" target="_blank"
-              href="https://nwmissouri.instructure.com/courses/32360">691-02-8AM-1700</a>
-
-            <a rel="noopener" target="_blank"
-              href="https://nwmissouri.instructure.com/courses/32363">386-01-9AM-1150</a>
-
-            <a rel="noopener" target="_blank"
-              href="https://nwmissouri.instructure.com/courses/32472">563-02-11AM-1200</a>
-
-            <a rel="noopener" target="_blank"
-              href="https://nwmissouri.instructure.com/courses/32423">517-01-2PM-3400</a>
-
-            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/33865">44-608
-              (fundamentals)</a>
-          </nav>
--->
-          <nav id="2021 Spring"> 2021 SPRING
-            <a rel="noopener" target="_blank"
-              href="https://nwmissouri.instructure.com/courses/35916">692-03-9AM-1700</a>
-
-            <a rel="noopener" target="_blank"
-              href="https://nwmissouri.instructure.com/courses/36074">517-01/02-2PM-3400</a>
-
-            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/36101">44-608-08/81
-              (OP Fundamentals)</a>
-          </nav>
-
-          <nav id="2021 Summer"> 2021 Summer
-            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/38672">44-618-03/04 CH1350 Sec04 10:15am-12:45pm Sec03 1-3:30pm</a>
-            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/37830">44-608-80/81 (OP Fundamentals)</a>
-          </nav>
 
           <nav id="2021 Fall"> 2021 Fall
-            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/40745">GDP1-691-8AM-CH-1700</a>
-
-            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/40506">DFIR-386-9AM-CH-1400</a>
-         
-            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/41794">OOP-542-11AM-Valk-111</a>
-            
-            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/40648">Online-44-608-80-81</a>
-
-
+            <a rel="noopener" target="_blank"
+              href="https://nwmissouri.instructure.com/courses/40745">GDP1-691-8AM-CH-1700</a>
+            <a rel="noopener" target="_blank"
+              href="https://nwmissouri.instructure.com/courses/40506">DFIR-386-9AM-CH-1400</a>
+            <a rel="noopener" target="_blank"
+              href="https://nwmissouri.instructure.com/courses/41794">OOP-542-11AM-Valk-111</a>
+            <a rel="noopener" target="_blank"
+              href="https://nwmissouri.instructure.com/courses/40648">Online-44-608-80-81</a>
+          </nav>
+          <nav id="2021 Fall"> 2022 Spring
+            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/40745">GDP2-9AM CH3650
+              (28+25)</a>
+            <a rel="noopener" target="_blank" href="https://nwmissouri.instructure.com/courses/40506">BigData-1&2PM
+              CH3300 (48+48)</a>
+            <a rel="noopener" target="_blank"
+              href="https://nwmissouri.instructure.com/courses/40648">Online-44-608-80-81</a>
           </nav>
 
           <nav id="syllabus">
-
-            <a rel="noopener" target="_blank"
-              href="https://denisecase.github.io/44-241-programming2-syllabus/">241-Syllabus</a>
             <a rel="noopener" target="_blank"
               href="https://denisecase.github.io/44-386-digital-forensics-syllabus/">Inperson 386-Syllabus</a>
             <a rel="noopener" target="_blank"
@@ -213,534 +179,7 @@
       </div>
       <!-- end links grid -->
 
-      <!-- Accordian container-->
-      <div class="accordion " id="accordionExample">
 
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-              aria-expanded="false" aria-controls="collapseOne">
-              2021 Spring (Reg: Wed Jan 13 - Fri May 7, OP: Wed Jan 13 - Fri Mar 5)
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-
-            
-              <table class="tg">
-                <thead>
-                  <tr>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">RN</span></th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Camp</span></th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Crse#</span>
-                    </th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Sec</span></th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Schd Type</span>
-                    </th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Credit
-                        hrs</span></th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Title</span>
-                    </th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Part term</span>
-                    </th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Days</span></th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Time</span></th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Location</span>
-                    </th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Seats</span>
-                    </th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Enrld</span>
-                    </th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Open</span></th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Instructor</span>
-                    </th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Attribute</span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">21870</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">NW</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">44517</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">01</span></td>
-                    <td class="tg-byb7"></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">3</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">BIG DATA</span>
-                    </td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">Full Term</span>
-                    </td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">MWF</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">01:00 pm-01:50
-                        pm</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">CH3300</span>
-                    </td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">25</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">32</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">-7</span></td>
-                    <td class="tg-byb7"><span
-                        style="font-weight:normal;font-style:normal;color:black">Case,Denise</span></td>
-                    <td class="tg-byb7"></td>
-                  </tr>
-                  <tr>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">22085</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">NW</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">44517</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">02</span></td>
-                    <td class="tg-byb7"></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">3</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">BIG DATA</span>
-                    </td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">Full Term</span>
-                    </td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">MWF</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">02:00 pm-02:50
-                        pm</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">CH3300</span>
-                    </td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">25</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">30</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">-5</span></td>
-                    <td class="tg-byb7"><span
-                        style="font-weight:normal;font-style:normal;color:black">Case,Denise</span></td>
-                    <td class="tg-byb7"></td>
-                  </tr>
-                  <tr>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">22474</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">OP</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">44608</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">80</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">OP</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">3</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">DATA ANALYTICS
-                        FUNDAMENTALS</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">Online
-                        Professional Block 1</span></td>
-                    <td class="tg-byb7"></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">-</span></td>
-                    <td class="tg-byb7"></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">25</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">3</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">22</span></td>
-                    <td class="tg-byb7"><span
-                        style="font-weight:normal;font-style:normal;color:black">Case,Denise</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">1.Online
-                        Professional-Block 1</span></td>
-                  </tr>
-                  <tr>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">22475</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">OP</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">44608</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">81</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">OP</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">3</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">DATA ANALYTICS
-                        FUNDAMENTALS</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">Online
-                        Professional Block 1</span></td>
-                    <td class="tg-byb7"></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">-</span></td>
-                    <td class="tg-byb7"></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">25</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">0</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">25</span></td>
-                    <td class="tg-byb7"><span
-                        style="font-weight:normal;font-style:normal;color:black">Case,Denise</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">1.Online
-                        Professional-Block 1</span></td>
-                  </tr>
-                  <tr>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">21803</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">NW</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">44692</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">03</span></td>
-                    <td class="tg-byb7"></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">3</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">GRAD DIRECT
-                        PROJECT II</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">Full Term</span>
-                    </td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">MWF</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">09:00 am-09:50
-                        am</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">CH1200</span>
-                    </td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">24</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">24</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">0</span></td>
-                    <td class="tg-byb7"><span
-                        style="font-weight:normal;font-style:normal;color:black">Case,Denise</span></td>
-                    <td class="tg-byb7"></td>
-                  </tr>
-                </tbody>
-              </table>
-
-
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-              aria-expanded="false" aria-controls="collapseTwo">
-              2021 Summer (Reg: Tue May 11 - Fri Jun 4, OP: Tue May 11 - Fri Jun 25)
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-
-
-           
-              <table class="tg">
-                <thead>
-                  <tr>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">CRN</span></th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Camp</span></th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Crse#</span>
-                    </th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Sec</span></th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Schd Type</span>
-                    </th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Credit
-                        hrs</span></th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Title</span>
-                    </th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Part term</span>
-                    </th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Days</span></th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Time</span></th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Location</span>
-                    </th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Seats</span>
-                    </th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Enrld</span>
-                    </th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Open</span></th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Instructor</span>
-                    </th>
-                    <th class="tg-dgl5"><span
-                        style="font-weight:bold;font-style:normal;color:black;background-color:initial">Attribute</span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">31554</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">NW</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">44599</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">01</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">WB</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">3</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">SP PROJ: DATA
-                        ANALYTICS FUND</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">7-Week Block
-                        1</span></td>
-                    <td class="tg-byb7"></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">-</span></td>
-                    <td class="tg-byb7"></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">0</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">2</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">-2</span></td>
-                    <td class="tg-byb7"><span
-                        style="font-weight:normal;font-style:normal;color:black">Case,Denise</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">1.Web
-                        Course</span></td>
-                  </tr>
-                  <tr>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">31263</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">OP</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">44608</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">80</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">OP</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">3</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">DATA ANALYTICS
-                        FUNDAMENTALS</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">Online
-                        Professional Block 1</span></td>
-                    <td class="tg-byb7"></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">-</span></td>
-                    <td class="tg-byb7"></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">25</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">10</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">15</span></td>
-                    <td class="tg-byb7"><span
-                        style="font-weight:normal;font-style:normal;color:black">Case,Denise</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">1.Online
-                        Professional-Block 1</span></td>
-                  </tr>
-                  <tr>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">31264</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">OP</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">44608</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">81</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">OP</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">3</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">DATA ANALYTICS
-                        FUNDAMENTALS</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">Online
-                        Professional Block 1</span></td>
-                    <td class="tg-byb7"></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">-</span></td>
-                    <td class="tg-byb7"></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">0</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">0</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">0</span></td>
-                    <td class="tg-byb7"><span
-                        style="font-weight:normal;font-style:normal;color:black">Case,Denise</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">1.Online
-                        Professional-Block 1</span></td>
-                  </tr>
-                  <tr>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">31510</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">NW</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">44618</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">03</span></td>
-                    <td class="tg-byb7"></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">3</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">PROJECT MGMT IN
-                        BUS &amp; TECH</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">First
-                        Block</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">MTWR</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">01:00 pm-03:30
-                        pm</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">CH1200</span>
-                    </td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">28</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">18</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">10</span></td>
-                    <td class="tg-byb7"><span
-                        style="font-weight:normal;font-style:normal;color:black">Case,Denise</span></td>
-                    <td class="tg-byb7"></td>
-                  </tr>
-                  <tr>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">31511</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">NW</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">44618</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">04</span></td>
-                    <td class="tg-byb7"></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">3</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">PROJECT MGMT IN
-                        BUS &amp; TECH</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">First
-                        Block</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">MTWR</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">10:15 am-12:45
-                        pm</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">CH1200</span>
-                    </td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">28</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">28</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">0</span></td>
-                    <td class="tg-byb7"><span
-                        style="font-weight:normal;font-style:normal;color:black">Case,Denise</span></td>
-                    <td class="tg-0lax"></td>
-                  </tr>
-                </tbody>
-              </table>
-
-
-            </div>
-          </div>
-        </div>
-
-
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              2021 Fall (Reg: Wed Aug 18 - Fri Dec 10, OP: Wed Aug 18 - Fri Oct 8)
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-
-
-
-                <table class="tg">
-                <thead>
-                  <tr>
-                    <th class="tg-pdeq"><span style="font-weight:bold;font-style:normal;color:black;background-color:initial">RN</span></th>
-                    <th class="tg-pdeq"><span style="font-weight:bold;font-style:normal;color:black;background-color:initial">Camp</span></th>
-                    <th class="tg-pdeq"><span style="font-weight:bold;font-style:normal;color:black;background-color:initial">Crse#</span></th>
-                    <th class="tg-pdeq"><span style="font-weight:bold;font-style:normal;color:black;background-color:initial">Sec</span></th>
-                    <th class="tg-pdeq"><span style="font-weight:bold;font-style:normal;color:black;background-color:initial">Schd Type</span></th>
-                    <th class="tg-pdeq"><span style="font-weight:bold;font-style:normal;color:black;background-color:initial">Credit hrs</span></th>
-                    <th class="tg-pdeq"><span style="font-weight:bold;font-style:normal;color:black;background-color:initial">Title</span></th>
-                    <th class="tg-pdeq"><span style="font-weight:bold;font-style:normal;color:black;background-color:initial">Part term</span></th>
-                    <th class="tg-pdeq"><span style="font-weight:bold;font-style:normal;color:black;background-color:initial">Days</span></th>
-                    <th class="tg-pdeq"><span style="font-weight:bold;font-style:normal;color:black;background-color:initial">Time</span></th>
-                    <th class="tg-pdeq"><span style="font-weight:bold;font-style:normal;color:black;background-color:initial">Location</span></th>
-                    <th class="tg-pdeq"><span style="font-weight:bold;font-style:normal;color:black;background-color:initial">Seats</span></th>
-                    <th class="tg-pdeq"><span style="font-weight:bold;font-style:normal;color:black;background-color:initial">Enrld</span></th>
-                    <th class="tg-pdeq"><span style="font-weight:bold;font-style:normal;color:black;background-color:initial">Open</span></th>
-                    <th class="tg-dgl5"><span style="font-weight:bold;font-style:normal;color:black;background-color:initial">Attribute</span></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">11949</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">NW</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">44241</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">01</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">BLD</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">3</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">COMPUTER PROGRAMMING II</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">Full Term</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">MWF</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">11:00 am-11:50 am</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">CH1400</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">30</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">21</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">9</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">1.Blended Course</span></td>
-                  </tr>
-                  <tr>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">*11949*</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">NW</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">44241</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">01</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">BLD</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">0</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">COMPUTER PROGRAMMING II</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">Full Term</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">M</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">04:00 pm-04:50 pm</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">CH1400</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">30</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">21</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">9</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">1.Blended Course</span></td>
-                  </tr>
-                  <tr>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">12132</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">NW</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">44386</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">01</span></td>
-                    <td class="tg-iaeg"></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">3</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">DIGITAL FORENSICS</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">Full Term</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">MWF</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">09:00 am-09:50 am</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">CH1400</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">25</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">22</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">3</span></td>
-                    <td class="tg-byb7"></td>
-                  </tr>
-                  <tr>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">12738</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">NW</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">44599</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">02</span></td>
-                    <td class="tg-iaeg"></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">3</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">SP PROJ: DIGITAL FORENSICS</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">Full Term</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">MWF</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">09:00 am-09:50 am</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">CH1400</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">5</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">2</span></td>
-                    <td class="tg-iaeg"><span style="font-weight:normal;font-style:normal;color:black">3</span></td>
-                    <td class="tg-byb7"></td>
-                  </tr>
-                  <tr>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">13206</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">OP</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">44608</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">80</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">OP</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">3</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">DATA ANALYTICS FUNDAMENTALS</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">Online Professional Block 1</span></td>
-                    <td class="tg-byb7"></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">-</span></td>
-                    <td class="tg-byb7"></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">25</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">4</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">21</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">1.Online Professional-Block 1</span></td>
-                  </tr>
-                  <tr>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">13207</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">OP</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">44608</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">81</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">OP</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">3</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">DATA ANALYTICS FUNDAMENTALS</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">Online Professional Block 1</span></td>
-                    <td class="tg-byb7"></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">-</span></td>
-                    <td class="tg-byb7"></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">0</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">0</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">0</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">1.Online Professional-Block 1</span></td>
-                  </tr>
-                  <tr>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">11967</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">NW</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">44691</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">02</span></td>
-                    <td class="tg-byb7"></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">3</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">GRAD DIRECT PROJECT I</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">Full Term</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">MWF</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">08:00 am-08:50 am</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">CH1700</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">29</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">26</span></td>
-                    <td class="tg-byb7"><span style="font-weight:normal;font-style:normal;color:black">3</span></td>
-                    <td class="tg-0lax"></td>
-                  </tr>
-                </tbody>
-                </table>
-
-
-            </div>
-          </div>
-        </div>
-
-      </div>
     </nav>
 
     <article class=" caption">
@@ -759,7 +198,7 @@
   </main>
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="./scripts/bootstrap.bundle.min.js"   ></script>
+  <script src="./scripts/bootstrap.bundle.min.js"></script>
 
   <!-- paths are root-relative -->
 

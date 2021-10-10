@@ -1,8 +1,7 @@
 {
   "name": "NWCase: New Tab Extension",
-  "title": "NWCase: New Tab Extension",
   "short_name": "NWCaseNT",
-  "version": "0.3",
+  "version": "0.4",
   "manifest_version": 2,
   "description": "A simple Chrome new tab extension to start the semester.",
   "browser_action": {
@@ -31,9 +30,8 @@
     "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1",
     "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js",
     "./favicon.ico",
-    "https://img.buzzfeed.com/buzzfeed-static/static/2017-04/19/15/asset/buzzfeed-prod-fastlane-01/sub-buzz-7887-1492630453-6.jpg",
-    "https://img.buzzfeed.com/buzzfeed-static/static/2017-04/19/15/asset/buzzfeed-prod-fastlane-03/sub-buzz-6069-1492630255-3.jpg",
-    "https://img.buzzfeed.com/buzzfeed-static/static/2017-04/19/15/asset/buzzfeed-prod-fastlane-03/sub-buzz-6150-1492630238-1.jpg"
+    "https://api.icndb.com/jokes/random?limitTo=[nerdy]",
+    "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US"
   ],
   "web_accessible_resources": ["./favicon.ico"]
 }
