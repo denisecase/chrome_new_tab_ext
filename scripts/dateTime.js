@@ -82,22 +82,24 @@ export function getFocus(nday, nhour) {
   const forensics = '44-386 Digital Forensics';
   const bigData = '44-517 Big Data';
   const gdp = '44-691 GDP';
-  const def = 'Research/Grants';
+  const def = 'Retired';
   const weekend = 'Weekend';
 
   let t = '';
-  if ((nday === 1 || nday === 3 || nday === 5) && nhour === 8) {
-    t = gdp;
-  } else if ((nday === 1 || nday === 3 || nday === 5) && nhour === 9) {
-    t = forensics;
-  } else if ((nday === 1 || nday === 3 || nday === 5) && nhour === 11) {
-    t = web;
-  } else if ((nday === 1 || nday === 3 || nday === 5) && nhour === 14) {
-    t = bigData;
-  } else if (nday === 2 || nday === 4) {
+  if ((nday === 1 || nday === 3 || nday === 5) && nhour === 10) {
     t = def;
-  } else if (nday === 6 || nday === 7) {
-    t = weekend;
+  // } else if ((nday === 1 || nday === 3 || nday === 5) && nhour === 9) {
+  //   t = forensics;
+  // } else if ((nday === 1 || nday === 3 || nday === 5) && nhour === 11) {
+  //   t = web;
+  // } else if ((nday === 1 || nday === 3 || nday === 5) && nhour === 13 ) {
+  //   t = bigData;
+  // } else if ((nday === 1 || nday === 3 || nday === 5) && nhour === 14 ) {
+  //   t = bigData;
+  // } else if (nday === 2 || nday === 4) {
+  //   t = def;
+  // } else if (nday === 6 || nday === 7) {
+  //   t = weekend;
   } else {
     t = def;
   }
