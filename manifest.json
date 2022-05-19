@@ -2,7 +2,7 @@
   "name": "NWCase: New Tab Extension",
   "short_name": "NWCaseNT",
   "version": "0.4",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "description": "A simple Chrome new tab extension to start the semester.",
   "browser_action": {
     "default_icon": "./icon_36.png",
@@ -25,7 +25,9 @@
   },
   "permissions": [
     "tabs",
-    "geolocation",
+    "geolocation"
+     ],
+  "host_permissions": [
     "<all_urls>",
     "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1",
     "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js",
