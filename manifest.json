@@ -4,7 +4,7 @@
   "version": "0.4",
   "manifest_version": 3,
   "description": "A simple Chrome new tab extension to start the semester.",
-  "browser_action": {
+  "action": {
     "default_icon": "./icon_36.png",
     "default_title": "NWCase: New Tab Extension"
   },
@@ -34,5 +34,11 @@
     "https://api.icndb.com/jokes/random?limitTo=[nerdy]",
     "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US"
   ],
-  "web_accessible_resources": ["favicon.ico"]
+  "web_accessible_resources": [
+    {
+    "resources" : ["favicon.ico"],
+    "matches": [ "https://*/*" ]
+
+    }
+  ]
 }
