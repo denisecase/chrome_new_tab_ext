@@ -37,7 +37,7 @@ const tmonth = [
 ];
 const springStartWeekNumber = 2;
 const fallStartWeekNumber = 33;
-const weeksPerTerm = 17;
+const weeksPerTerm = 7;
 
 export function convertTo12Hour(nhour) {
   let ap;
@@ -124,7 +124,7 @@ export function getSchoolWeek() {
   const d = new Date();
   const nweek = d.getWeekNumber();
   const nmonth = d.getMonth();
-  const startweek = nmonth < 5 ? springStartWeekNumber : fallStartWeekNumber;
+  const startweek = 19; // summer block 1
   const schoolWeek = nweek - startweek;
   return schoolWeek;
 }
