@@ -35,7 +35,7 @@ const tmonth = [
   'Nov',
   'Dec',
 ];
-const springStartWeekNumber = 2;
+//const springStartWeekNumber = 2;
 const fallStartWeekNumber = 33;
 const weeksPerTerm = 7;
 
@@ -78,12 +78,12 @@ export function getClock() {
 }
 
 export function getFocus(nday, nhour) {
-  //const web = '44-563 Web Apps';
-  //const forensics = '44-386 Digital Forensics';
-  //const bigData = '44-517 Big Data';
-  //const gdp = '44-691 GDP';
+  // const web = '44-563 Web Apps';
+  // const forensics = '44-386 Digital Forensics';
+  // const bigData = '44-517 Big Data';
+  // const gdp = '44-691 GDP';
   const def = 'Retired';
-  //const weekend = 'Weekend';
+  // const weekend = 'Weekend';
 
   let t = '';
   if ((nday === 1 || nday === 3 || nday === 5) && nhour === 10) {
@@ -123,8 +123,9 @@ export function getWeeksPerTerm() {
 export function getSchoolWeek() {
   const d = new Date();
   const nweek = d.getWeekNumber();
-  const nmonth = d.getMonth();
-  const startweek = 19; // summer block 1
+  // const nmonth = d.getMonth();
+  const startweek = fallStartWeekNumber; 
+  // const startweek = 19; // summer block 1
   const schoolWeek = nweek - startweek;
   return schoolWeek;
 }
