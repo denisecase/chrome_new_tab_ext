@@ -78,12 +78,12 @@ export function getClock() {
 }
 
 export function getFocus(nday, nhour) {
-  const web = '44-563 Web Apps';
-  const forensics = '44-386 Digital Forensics';
-  const bigData = '44-517 Big Data';
-  const gdp = '44-691 GDP';
+  //const web = '44-563 Web Apps';
+  //const forensics = '44-386 Digital Forensics';
+  //const bigData = '44-517 Big Data';
+  //const gdp = '44-691 GDP';
   const def = 'Retired';
-  const weekend = 'Weekend';
+  //const weekend = 'Weekend';
 
   let t = '';
   if ((nday === 1 || nday === 3 || nday === 5) && nhour === 10) {
