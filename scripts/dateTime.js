@@ -35,9 +35,6 @@ const tmonth = [
   'Nov',
   'Dec',
 ];
-//const springStartWeekNumber = 2;
-const fallStartWeekNumber = 33;
-const weeksPerTerm = 7;
 
 export function convertTo12Hour(nhour) {
   let ap;
@@ -66,7 +63,6 @@ export function getClock() {
   const nday = d.getDay();
   const nmonth = d.getMonth();
   const ndate = d.getDate();
-  // const nyear = d.getFullYear()
   const nhour = d.getHours();
   let nmin = d.getMinutes();
   const { ap, hr } = convertTo12Hour(nhour);
@@ -77,35 +73,6 @@ export function getClock() {
   return { clock, nhour, nday };
 }
 
-export function getFocus(nday, nhour) {
-  // const web = '44-563 Web Apps';
-  // const forensics = '44-386 Digital Forensics';
-  // const bigData = '44-517 Big Data';
-  // const gdp = '44-691 GDP';
-  const def = 'Retired';
-  // const weekend = 'Weekend';
-
-  let t = '';
-  if ((nday === 1 || nday === 3 || nday === 5) && nhour === 10) {
-    t = def;
-  // } else if ((nday === 1 || nday === 3 || nday === 5) && nhour === 9) {
-  //   t = forensics;
-  // } else if ((nday === 1 || nday === 3 || nday === 5) && nhour === 11) {
-  //   t = web;
-  // } else if ((nday === 1 || nday === 3 || nday === 5) && nhour === 13 ) {
-  //   t = bigData;
-  // } else if ((nday === 1 || nday === 3 || nday === 5) && nhour === 14 ) {
-  //   t = bigData;
-  // } else if (nday === 2 || nday === 4) {
-  //   t = def;
-  // } else if (nday === 6 || nday === 7) {
-  //   t = weekend;
-  } else {
-    t = def;
-  }
-  return t;
-}
-
 export function getGreeting(numHour) {
   let t = 'Good evening';
   if (numHour < 12) {
@@ -114,18 +81,4 @@ export function getGreeting(numHour) {
     t = 'Good afternoon';
   }
   return `${t}, Dr. Case`;
-}
-
-export function getWeeksPerTerm() {
-  return weeksPerTerm;
-}
-
-export function getSchoolWeek() {
-  const d = new Date();
-  const nweek = d.getWeekNumber();
-  // const nmonth = d.getMonth();
-  const startweek = fallStartWeekNumber; 
-  // const startweek = 19; // summer block 1
-  const schoolWeek = nweek - startweek;
-  return schoolWeek;
 }
