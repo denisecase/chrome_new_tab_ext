@@ -39,7 +39,7 @@ import * as dateTime from './dateTime.js';
   // define event handlers .........................................................
 
   const updateDisplay = (elClock, elGreet) => {
-    const { clock, nhour, nday } = dateTime.getClock();
+    const { clock, nhour } = dateTime.getClock();
     const greeting = dateTime.getGreeting(nhour);
     elClock.innerHTML = clock;
     elGreet.innerHTML = greeting;

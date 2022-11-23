@@ -70,7 +70,7 @@ export function getClock() {
     nmin = `0${nmin}`;
   }
   const clock = `${tday[nday]} ${tmonth[nmonth]} ${ndate}  ${hr}:${nmin}${ap}`;
-  return { clock, nhour, nday };
+  return { clock, nhour };
 }
 
 export function getGreeting(numHour) {
