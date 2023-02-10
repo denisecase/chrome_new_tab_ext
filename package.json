@@ -24,11 +24,6 @@
     "lint-fix": "eslint --fix .",
     "sort": "npx sort-package-json"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run sort && npm run lint-fix"
-    }
-  },
   "dependencies": {
     "axios": "latest",
     "globals": "latest"
