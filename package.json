@@ -1,6 +1,6 @@
 {
   "name": "chrome_new_tab_ext",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Customized Chrome 'New Tab' Extension, which can be updated to reflect current links each semester",
   "keywords": [
     "chrome-extension",

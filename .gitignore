@@ -5,8 +5,3 @@ node_modules
 
 # Visual Studio Code cache/options directory
 .vscode/
-/scripts/jokes.js
-/scripts/location.js
-/scripts/canvas.js
-/scripts/bootstrap.bundle.min.js
-/scripts/bootstrap.bundle.min.js.map

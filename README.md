@@ -14,14 +14,6 @@ Extensions are small browser add-ons that add new and useful features to Chrome.
 
 - [Set up machine for development (Windows version)](https://github.com/denisecase/windows-dev-list)
 - [Install Node.js to run dev tools](https://nodejs.org/en/)
-- [Install Cypress globally](https://docs.cypress.io) - must be global to get the Cypress commands to work! Use npm which comes with Node.
-
-## Updates
-
-- ES6 updates
-- Cypress testing (built on Mocha test framework and Chai assertions)
-- Uses fetch() instead of XMLHttpRequest
-- [Pure - Simple Responsive CSS](https://purecss.io/)
 
 ## SIGCSE 2018 Workshop
 
@@ -75,11 +67,6 @@ npm run t1
 npm run t2
 npm run t3
 npm run t4
-npx cypress run  --spec "cypress/integration/dailyImage.spec.js"
-npx cypress run  --spec "cypress/integration/dateTime.spec.js"
-npx cypress run  --spec "cypress/integration/jokes.spec.js"
-npx cypress run  --spec "cypress/integration/location.spec.js"
-npx cypress run
 ```
 
 The command npx runs binarys in the node_modules folder (easier than a long path or environment variable).

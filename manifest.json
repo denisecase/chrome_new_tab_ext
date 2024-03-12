@@ -24,14 +24,11 @@
     "keyword": "aString"
   },
   "permissions": [
-    "tabs",
-    "geolocation"
+    "tabs"
      ],
   "host_permissions": [
     "<all_urls>",
     "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1",
-    "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js",
-    "https://api.icndb.com/jokes/random?limitTo=[nerdy]",
     "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US"
   ],
   "web_accessible_resources": [
