@@ -56,33 +56,9 @@ Open PowerShell here as Admin to:
 1. Install dependencies
 1. Format code files with Prettier (and fix any issues manually)
 1. Find (and fix JavaScript) with ESLint (and fix any issues manually)
-1. Run Cypress testing (couple ways to run each local test alone)
-1. Run all Cypress examples and local tests
 
-```PowerShell
+```shell
 npm install
 npm run prettier
 npm run eslint
-npm run t1
-npm run t2
-npm run t3
-npm run t4
 ```
-
-The command npx runs binarys in the node_modules folder (easier than a long path or environment variable).
-
-## Concepts
-
-Our code runs in the browser, but we test it by running it in Node. This causes several issues.
-Cypress uses Mocha and Chai (popular tools) and provides a nearly complete API to access our app.
-
-See [2019 Testing Guilde](https://medium.com/welldone-software/an-overview-of-javascript-testing-in-2019-264e19514d0a)
-
-- Unit Tests. Tests bits like functions or classes by supplying input and verifying output.
-- Integration Tests. Tests several bits together.
-- Functional (end-to-end/black-box) Tests. Tests scenarios by interacting with the running app.
-
-Recommendation:
-
-- Run unit + integration on every change.
-- Run functional tests before commits.
