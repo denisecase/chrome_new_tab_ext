@@ -32,7 +32,6 @@
     "eslint": "latest",
     "eslint-config-airbnb-base": "latest",
     "eslint-plugin-import": "latest",
-    "husky": "latest",
     "sort-package-json": "latest"
   }
 }
