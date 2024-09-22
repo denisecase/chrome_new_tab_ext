@@ -26,7 +26,7 @@ import * as dateTime from './dateTime.js';
      * @param {Element} element to update
      */
   function updateBackgroundImage(imageURL, el) {
-    el.style.backgroundImage = `url("${imageURL}"`;
+    el.style.backgroundImage = "url('full_moon.jpg')";
   }
 
   async function updateDisplayImage(el) {

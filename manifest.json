@@ -2,7 +2,9 @@
   "name": "NWCase: New Tab Extension",
   "short_name": "NWCaseNT",
   "version": "0.4",
-  "manifest_version": 3,
+  "manifest_version": 4,
+  "display": "standalone",
+  "start_url": "../tab.html",
   "description": "A simple Chrome new tab extension to start the semester.",
   "action": {
     "default_icon": "./icon_36.png",
@@ -17,6 +19,13 @@
     "multiple_mounts": true,
     "source": "network"
   },
+  "icons": [
+  {
+    "src": "icon_144.png",
+    "sizes": "144x144",
+    "purpose": "any"
+  }
+],
   "homepage_url": "http://denisecase.github.io/",
   "incognito": "spanning",
   "offline_enabled": true,
