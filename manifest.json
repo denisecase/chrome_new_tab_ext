@@ -19,13 +19,7 @@
     "multiple_mounts": true,
     "source": "network"
   },
-  "icons": [
-  {
-    "src": "icon_144.png",
-    "sizes": "144x144",
-    "purpose": "any"
-  }
-],
+
   "homepage_url": "http://denisecase.github.io/",
   "incognito": "spanning",
   "offline_enabled": true,
@@ -34,7 +28,7 @@
   },
   "permissions": [
     "tabs"
-     ],
+  ],
   "host_permissions": [
     "<all_urls>",
     "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1",
@@ -42,9 +36,12 @@
   ],
   "web_accessible_resources": [
     {
-    "resources" : ["favicon.ico"],
-    "matches": [ "https://*/*" ]
-
+      "resources": [
+        "favicon.ico"
+      ],
+      "matches": [
+        "https://*/*"
+      ]
     }
   ]
 }
