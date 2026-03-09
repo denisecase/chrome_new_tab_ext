@@ -45,14 +45,25 @@ export default async function getDailyImage() {
   try {
     console.log(`Fetching image from ${bingImageURL}`);
     console.log(`Example result: ${bingBaseURL}${exampleResponseJSON.images[0].url}`);
+
     const response = await fetch(bingImageURL);
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
     const obj = await response.json();
-    console.log(`FETCHED. Response JSON ${obj}`);
-    console.dir(obj);
-    const imageURL = `${bingBaseURL}${obj.images[0].url}` || 'not found';
+    console.log('Fetched response JSON:', obj);
+
+    const relativeURL = obj?.images?.[0]?.url;
+    if (!relativeURL) {
+      throw new Error('No image URL found in response.');
+    }
+
+    const imageURL = `${bingBaseURL}${relativeURL}`;
     console.log(`Actual result: ${imageURL}`);
     return imageURL;
   } catch (error) {
-    return 'Error getting background image.';
+    console.error('Error getting background image:', error);
+    return null;
   }
 }

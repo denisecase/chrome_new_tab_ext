@@ -20,13 +20,11 @@
   "author": "Denise Case",
   "main": "tab.html",
   "scripts": {
-    "lint": "eslint .",
-    "lint-fix": "eslint --fix .",
-    "sort": "npx sort-package-json"
+    "lint": "eslint . --fix",
+    "sort": "sort-package-json"
   },
   "dependencies": {
-    "axios": "latest",
-    "globals": "latest"
+    "axios": "^1.13.6"
   },
   "devDependencies": {
     "eslint": "latest",

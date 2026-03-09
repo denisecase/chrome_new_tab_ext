@@ -10,7 +10,7 @@
  * https://stackoverflow.com/questions/6117814/get-week-of-year-in-javascript-like-in-php/6117889#6117889
  */
 // eslint-disable-next-line no-extend-native
-Date.prototype.getWeekNumber = function () {
+Date.prototype.getWeekNumber = function getWeekNumber() {
   const onejan = new Date(this.getFullYear(), 0, 1);
   const millisecsInDay = 86400000;
   return Math.ceil(

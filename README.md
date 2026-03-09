@@ -54,11 +54,13 @@ Participants will create a “New Tab” extension for their school that can be 
 Open PowerShell here as Admin to:
 
 1. Install dependencies
-1. Format code files with Prettier (and fix any issues manually)
-1. Find (and fix JavaScript) with ESLint (and fix any issues manually)
+2. Audit dependencies for security
+3. Run sort
+4. Find (and fix JavaScript) with ESLint 
 
 ```shell
 npm install
-npm run prettier
-npm run eslint
+npm audit
+npm run sort
+npm run lint
 ```

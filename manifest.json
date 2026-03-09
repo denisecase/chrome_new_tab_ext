@@ -19,16 +19,16 @@
     "multiple_mounts": true,
     "source": "network"
   },
-
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
   "homepage_url": "http://denisecase.github.io/",
   "incognito": "spanning",
   "offline_enabled": true,
   "omnibox": {
     "keyword": "aString"
   },
-  "permissions": [
-    "tabs"
-  ],
+  "permissions": ["tabs"],
   "host_permissions": [
     "<all_urls>",
     "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1",
@@ -36,12 +36,8 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": [
-        "favicon.ico"
-      ],
-      "matches": [
-        "https://*/*"
-      ]
+      "resources": ["favicon.ico"],
+      "matches": ["https://*/*"]
     }
   ]
 }

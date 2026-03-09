@@ -1,59 +1,40 @@
 /**
  * Chrome Home Tab module.
- * Illustrates basic HTML, CSS, JavaScript, JSON.
  * @module tab
  */
+
 import getDailyImage from './dailyImage.js';
 import * as dateTime from './dateTime.js';
 
-/**
- * Logic to execute each time the new tab loads.
- * Includes a recurring update every n milliseconds.
- */
-
-(function () {
-  // assign display elements .............................................
-
-  const backgroundElement = document.getElementById('background');
+(function initializeTab() {
   const greetingElement = document.getElementById('greeting');
   const clockElement = document.getElementById('clockbox');
 
-  // helper functions.................................................
-
-  /**
-     * Set background image to imageURL
-     * @param {String} imageURL
-     * @param {Element} element to update
-     */
-  function updateBackgroundImage(imageURL, el) {
-    el.style.backgroundImage = "url('full_moon.jpg')";
+  if (!greetingElement || !clockElement) {
+    console.error('Missing #greeting or #clockbox element.');
+    return;
   }
 
-  async function updateDisplayImage(el) {
+  async function updateDisplayImage() {
     const imageURL = await getDailyImage();
-    if (imageURL !== undefined) {
-      updateBackgroundImage(imageURL, el);
+    if (imageURL) {
+      document.body.style.backgroundImage = `url("${imageURL}")`;
     }
   }
 
-  // define event handlers .........................................................
-
-  const updateDisplay = (elClock, elGreet) => {
+  function updateDisplay() {
     const { clock, nhour } = dateTime.getClock();
     const greeting = dateTime.getGreeting(nhour);
-    elClock.innerHTML = clock;
-    elGreet.innerHTML = greeting;
-  };
+
+    clockElement.textContent = clock;
+    greetingElement.textContent = greeting;
+  }
 
   const refreshMilliseconds = 10000;
-  updateDisplayImage(backgroundElement);
-  updateDisplay(clockElement, greetingElement);
-  setInterval(
-    updateDisplay.bind(null, clockElement, greetingElement),
-    refreshMilliseconds,
-  );
 
-  // configure event listeners .............................................
+  updateDisplayImage();
+  updateDisplay();
+  setInterval(updateDisplay, refreshMilliseconds);
 
   console.log('done assigning handlers ....');
 }());
