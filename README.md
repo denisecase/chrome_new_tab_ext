@@ -53,14 +53,17 @@ Participants will create a “New Tab” extension for their school that can be 
 
 Open PowerShell here as Admin to:
 
-1. Install dependencies
-2. Audit dependencies for security
-3. Run sort
-4. Find (and fix JavaScript) with ESLint 
+1. Remove old lock file
+2. Remove old node_modules/
+
+3. Install dependencies
+4. Audit dependencies for security
+5. Run sort
+6. Find (and fix JavaScript) with ESLint 
 
 ```shell
 npm install
-npm audit
+npm audit fix
 npm run sort
 npm run lint
 ```
